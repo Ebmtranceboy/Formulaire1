@@ -1,0 +1,299 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pstricks,pst-node}
+\usepackage{pst-eucl,pst-tree}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[ portrait]{geometry}
+\usepackage{tabvar}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+\newgeometry{margin=0.2in,top=-0.2in}
+\maketitle
+\pagestyle{empty}
+\begin{tabular}{c||c|c|c}
+& Domaine & Formules & Notions clés \\
+\hline 
+ & & & \\
+ \rotatebox[origin=c]{270}{\rotatebox{90}{T}$\;$\rotatebox{90}{R}$\;$\rotatebox{90}{$\;$I}$\;$\rotatebox{90}{G}$\;$\rotatebox{90}{O}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{O}$\;$\rotatebox{90}{M}$\,$\rotatebox{90}{$\mathrm{\acute{E}}$}$\;$\rotatebox{90}{T}$\;$\rotatebox{90}{R}$\;$\rotatebox{90}{$\;$I}$\;$\rotatebox{90}{E}$\;$} & $\mathbb{R}$ & 
+\begin{tabular}{c}
+
+\begin{tabular}{c|c|c|c|c|c}
+angle (degrés) & 0$^\circ$ & 30$^\circ$ & 45$^\circ$ & 60$^\circ$ & 90$^\circ$  \\
+\hline 
+angle (radians) & 0 & $\frac{\pi}{6}$ & $\frac{\pi}{4}$ & $\frac{\pi}{3}$ & $\frac{\pi}{2}$ \\
+\hline
+cos & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 \\
+\hline
+sin & 0 & $\frac{1}{2}$  & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & 1
+\end{tabular}
+\\
+\\
+$\cos(a+b)=\cos(a)\cos(b)-\sin(a)\sin(b)$ \\
+$\sin(a+b)=\sin(a)\cos(b)-\cos(a)\sin(b)$
+\\
+\\
+$\cos(x)=\cos(a) \Leftrightarrow x \in \{a+2k\pi\} \cup \{-a+2k\pi\}$ \\
+$\sin(x)=\sin(a) \Leftrightarrow x \in \{a+2k\pi\} \cup \{\pi-a+2k\pi\}$
+
+\end{tabular}
+& \begin{tabular}{l}
+$2\pi$-périodicité \\ \\
+$k\in\mathbb{Z}$
+\end{tabular}
+\\
+& & &\\
+\hline 
+& & & \\
+ \rotatebox[origin=c]{270}{\rotatebox{90}{S}$\;$\rotatebox{90}{E}$\;$\rotatebox{90}{C}$\;$\rotatebox{90}{O}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{D}$\;\;\;$\rotatebox{90}{D}$\;$\rotatebox{90}{E}$\;$\rotatebox{90}{G}$\;$\rotatebox{90}{R}$\,$\rotatebox{90}{$\mathrm{\acute{E}}$}$\;$} & \begin{tabular}{c}$\mathbb{R}$ \\ \\ $a\neq 0$ \end{tabular} & 
+
+\begin{tabular}{c}
+$f(x)=ax^2+bx+c$ \\
+$\Delta=b^2-4ac$ \\
+$\alpha=\frac{-b}{2a}$ \\
+$\beta=f(\alpha)=\frac{-\Delta}{4a}$ \\
+si $\Delta\geq 0$, $x_1, x_2 = \frac{-b\pm\sqrt{\Delta}}{2a}$
+\\
+\\
+\begin{tabular}{c|c|c}
+& $a<0$ & $a > 0$ \\
+\hline
+& & \\
+& 
+$
+\begin{tabvar}{|C|CCCCC|} \hline
+x &-\infty & &\alpha &  & +\infty
+\\ \hline
+\niveau{1}{2}\TVcenter{f(x)}
+&+\infty &\croit
+&\barre{\beta} &\decroit
+&+\infty
+\\ \hline
+\end{tabvar}
+$ 
+& 
+
+
+$
+\begin{tabvar}{|C|CCCCC|} \hline
+x &-\infty & &\alpha &  & +\infty
+\\ \hline
+\niveau{2}{2}\TVcenter{f(x)}
+&+\infty &\decroit
+&\barre{\beta} &\croit
+&+\infty
+\\ \hline
+\end{tabvar}
+$
+
+
+\\ & & \\
+\hline 
+& & \\
+
+$\Delta > 0$ & 
+
+$
+\begin{tabvar}{|C|CCCCCCCCC|} \hline
+x &-\infty & &x_1 & &\alpha & & x_2 & &+\infty
+\\ \hline
+f(x) & & - & \barre{0} &  & + & & \barre{0} & - & \\
+\hline
+\end{tabvar}
+$
+
+&
+$
+\begin{tabvar}{|C|CCCCCCCCC|} \hline
+x &-\infty & &x_1 & &\alpha & & x_2 & &+\infty
+\\ \hline
+f(x) & & + & \barre{0} &  & - & & \barre{0} & + & \\
+\hline
+\end{tabvar}
+$
+\\
+& &\\
+\hline 
+& & \\
+
+$\Delta = 0$ &
+
+$
+\begin{tabvar}{|C|CCCCC|} \hline
+x &-\infty & &\alpha &  &+\infty
+\\ \hline
+f(x) & &- & \barre{0} &  - & \\
+\hline
+\end{tabvar}
+$
+& 
+$
+\begin{tabvar}{|C|CCCCC|} \hline
+x &-\infty & &\alpha &  &+\infty
+\\ \hline
+f(x) & & + & \barre{0} &  + & \\
+\hline
+\end{tabvar}
+$
+
+\\ 
+& &\\
+\hline 
+& & \\
+
+$\Delta < 0$ &
+
+$
+\begin{tabvar}{|C|CCC|} \hline
+x &-\infty &  & +\infty
+\\ \hline
+f(x) & & - & \\
+\hline
+\end{tabvar}
+$
+&
+$
+\begin{tabvar}{|C|CCC|} \hline
+x &-\infty &  & +\infty
+\\ \hline
+f(x) & & + & \\
+\hline
+\end{tabvar}
+$
+
+\end{tabular}
+
+\end{tabular}
+
+& \begin{tabular}{l}
+Une parabole \\
+présente une symétrie \\
+axiale d'axe \\
+passant par son sommet
+\end{tabular}
+
+\end{tabular}
+
+\def\vecu{\overrightarrow{u}}
+\def\vecv{\overrightarrow{v}}
+
+\newpage
+\newgeometry{margin=0.2in,top=1.5in}
+
+\begin{tabular}{c||c|c|c}
+& Domaine & Formules & Notions clés 
+\\
+\hline 
+ & & & \\
+ \rotatebox[origin=c]{270}{\rotatebox{90}{C}$\;$\rotatebox{90}{O}$\;$\rotatebox{90}{L}$\;$\rotatebox{90}{$\,$I}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{$\mathrm{\acute{E}}$}$\;$\rotatebox{90}{A}$\;\;\;$\rotatebox{90}{R}$\;$\rotatebox{90}{$\,$I}$\;$\rotatebox{90}{T}$\;$\rotatebox{90}{$\mathrm{\acute{E}}$}$\;\;$} &
+ \begin{tabular}{c}
+ \begin{tabular}{c}Repère\\quelconque\end{tabular}
+ \\
+ \\
+ $k\in\mathbb{R}^\star$
+ \end{tabular}
+ 
+ &
+ \begin{tabular}{c}
+$\vecu \left(\begin{array}{c}x\\y\end{array}\right),\vecv \left(\begin{array}{c}x'\\y'\end{array}\right)$ 
+
+ \\
+ \\
+$\det(\vecu,\vecv)=\left| \begin{array}{cc} x & x' \\ y & y' \end{array} \right| = xy'-x'y$
+\end{tabular}
+& 
+
+$
+\begin{array}{c}
+\det(\vecu,\vecv)=0 \\
+\Leftrightarrow \\
+\vecu = k \vecv \\
+\Leftrightarrow \\
+\vecu /\!\!/ \vecv
+\end{array}
+$
+\\
+\hline 
+ & & & \\
+ \rotatebox[origin=c]{270}{\rotatebox{90}{P}$\;$\rotatebox{90}{R}$\;$\rotatebox{90}{O}$\;$\rotatebox{90}{D}$\;$\rotatebox{90}{U}$\;$\rotatebox{90}{$\,$I}$\;$\rotatebox{90}{T}$\;\;\;$\rotatebox{90}{S}$\;$\rotatebox{90}{C}$\;$\rotatebox{90}{A}$\;$\rotatebox{90}{L}$\;$\rotatebox{90}{A}$\;$\rotatebox{90}{$\,$I}$\;$\rotatebox{90}{R}$\;$\rotatebox{90}{E}$\;$} &
+ \begin{tabular}{c}
+  Repère \\orthonormé 
+  \end{tabular} 
+  &
+
+  \begin{tabular}{c}
+  \psset{unit=1cm,PointSymbol=x}
+\begin{pspicture}(0,0)(5,3.3)
+\psaxes[linewidth=1.2pt,labels=none,
+ticks=none]{->}(0.5,0.5)(0,0)(4,3)
+\psset{arrows=->, arrowscale=2}
+\pstGeonode[PosAngle=-135](0.5,0.5){A}
+\pstGeonode[PosAngle=120](3,1){C}
+\pstGeonode[PosAngle=90](1,2){B}
+\pstGeonode[PosAngle=90](3.5,2.5){D}
+\pstMiddleAB[PointName=none,PointSymbol=none]{A}{B}{I}
+\uput{0.05}[-30](I){\fontsize{12}{1}$\overrightarrow{u}$}
+\pstMiddleAB[PointName=none,PointSymbol=none]{A}{C}{J}
+\uput{0.05}[120](J){\fontsize{12}{1}$\overrightarrow{v}$}
+\pstLineAB{A}{B}
+\pstLineAB{A}{C}
+\psset{arrows=-}
+\pstLineAB{D}{B}
+\pstLineAB{D}{C}
+\end{pspicture}
+\\
+\begin{tabular}{rcl}
+$\vecu {\scriptsize\bullet} \vecv $ & $ = $ & $\|\vecu\|\times \|\vecv\| \times \cos(\vecu\vecv)$
+\\
+ & $=$ & $AB\times AC\times \cos(\widehat{BAC})$
+\\
+$\vecu {\scriptsize\bullet} \vecv $ & $ = $ & $\frac{1}{2}(\|\vecu+\vecv\|^2-\|\vecu\|^2-\|\vecv\|^2)$
+\\ & $=$ & $\frac{1}{2}(AD^2-AB^2-AC^2)$
+\\
+$\vecu {\scriptsize\bullet} \vecv $ & $ = $ & $\frac{1}{2}(\|\vecu\|^2+\|\vecv\|^2-\|\vecv-\vecu\|^2)$
+\\ & $=$ & $\frac{1}{2}(AB^2+AC^2-BC^2)$
+\\
+$\vecu {\scriptsize\bullet} \vecv $ & $ = $ & $xx'+yy'$
+\end{tabular}
+
+\end{tabular}
+&
+$
+\begin{array}{c}
+\vecu {\scriptsize\bullet} \vecv = 0\\
+\Leftrightarrow \\
+\vecu \perp \vecv
+\end{array}
+$
+
+\\
+& & &\\
+\hline 
+ & & & \\
+ \rotatebox[origin=c]{270}{\rotatebox{90}{C}$\;$\rotatebox{90}{O}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{D}$\;$\rotatebox{90}{$\,$I}$\,$\rotatebox{90}{T}$\;$\rotatebox{90}{$\,$I}$\,$\rotatebox{90}{O}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{E}$\;$\rotatebox{90}{M}$\;$\rotatebox{90}{E}$\;$\rotatebox{90}{N}$\;$\rotatebox{90}{T}$\;\;$} &
+ $A\neq\emptyset$
+  &
+  $
+\begin{array}{l}
+P_A(B)=\dfrac{P(A\cap B)}{P(A)} \\
+\\
+P(B)=P(A)P_A(B)+P(\overline{A})P_{\overline{A}}(B)
+\end{array}$
+
+&
+
+\begin{tabular}{c}
+$A$ et $B$ indépendants \\
+$\Leftrightarrow$ \\
+$P_A(B)=P_{\overline{A}}(B)=P(B)$\\
+$\Leftrightarrow$ \\
+$P(A\cap B)=P(A)P(B)$
+\end{tabular}
+\end{tabular}
+
+\end{document}
